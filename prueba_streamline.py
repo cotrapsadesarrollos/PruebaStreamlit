@@ -36,7 +36,7 @@ if inventario_plataforma is not None and inventario_sae is not None:
         nombres_bases = list(df_inventario_plataforma['ALMACEN'].value_counts().index)
 
         # Creamos un diccionario para agregar la linea a cada producto
-        dictio_linea = dict(zip(df_inventario_sae['Clave '], df_inventario_sae['Línea ']))
+        dictio_linea = dict(zip([str(x) for x in df_inventario_sae['Clave ']], df_inventario_sae['Línea ']))
 
         # Creamos un archivo para cada BASE
         for i in nombres_bases[:-1]:
