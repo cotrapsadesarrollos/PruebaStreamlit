@@ -11,7 +11,7 @@ st.title("Procesador de Archivos Excel")
 inventario_plataforma = st.file_uploader("Seleccionar Inventario de la Plataforma", type=["xlsx","xls"])
 inventario_sae = st.file_uploader("Seleccionar Inventario de SAE", type=["xlsx","xls"])
 
-if inventario_plataforma is not None and inventario_sae is not None:
+if inventario_plataforma is not None or inventario_sae is not None:
     # Leer el archivo Excel del inventario de la plataforma e Inventario SAE
     df_inventario_plataforma = pd.read_excel(inventario_plataforma)
     df_inventario_sae = pd.read_excel(inventario_sae)
