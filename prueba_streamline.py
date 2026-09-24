@@ -8,6 +8,7 @@ import streamlit as st
 
 st.title("Separacion de Inventarios")
 
+st.header("Archvios necesarios para el procesamiento")
 inventario_plataforma = st.file_uploader("Seleccionar Inventario de la Plataforma", type=["xlsx","xls"])
 inventario_sae = st.file_uploader("Seleccionar Inventario de SAE", type=["xlsx","xls"])
 
