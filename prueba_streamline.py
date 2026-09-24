@@ -16,7 +16,8 @@ inventario_sae = st.file_uploader("Seleccionar Inventario de SAE:", type=["xlsx"
 
 dictio_bases = {}
 for i in range(numero_de_bases):
-    dictio_bases["inventario_base_{0}".format(i)] = st.file_uploader("Seleccionar Inventario de SAE:", type=["xlsx","xls"], key=f"Base_{i}")
+    dictio_bases["inventario_base_{0}".format(i)] = st.file_uploader(f"Seleccionar Inventario de la Base {i}:", type=["xlsx","xls"], key=f"Base_{i}")
+    print(dictio_bases["inventario_base_{0}".format(i)].name())
 
 if inventario_plataforma is not None and inventario_sae is not None:
     # Leer el archivo Excel del inventario de la plataforma e Inventario SAE
