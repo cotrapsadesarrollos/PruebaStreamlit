@@ -42,9 +42,9 @@ if inventario_plataforma is not None and inventario_sae is not None:
         # Creamos un archivo para cada BASE
         for i in nombres_bases[:-1]:
             df_base = bases[f'base_{i}']
-            df_base['LINEA'] = [dictio_linea[str(x)] for x in list(df_base['NUMERO DE PARTE'])]
+            df_base['LINEA'] = [str(dictio_linea[str(x)]) for x in list(df_base['NUMERO DE PARTE'])]
             df_base['NO. DE PARTE STRING'] = [str(x) for x in list(df_base['NUMERO DE PARTE'])]
-            df_base.sort_values(['LINEA', 'NUMERO DE PARTE'], inplace=True)
+            df_base.sort_values(['LINEA', 'NO. DE PARTE STRING'], inplace=True)
             df_base = df_base[['NUMERO DE PARTE', 'DESCRIPCION', 'EXISTENCIA']].copy()
 
             st.success("¡Procesamiento completado!")
