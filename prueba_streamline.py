@@ -6,7 +6,7 @@ from pathlib import Path
 from openpyxl.utils.dataframe import dataframe_to_rows
 import streamlit as st
 
-st.title("Separacion de Inventarios")
+st.title("Separacion de Inventarios Cotrapsa")
 
 inventario_plataforma = st.file_uploader("Seleccionar Inventario de la Plataforma", type=["xlsx","xls"])
 inventario_sae = st.file_uploader("Seleccionar Inventario de SAE", type=["xlsx","xls"])
