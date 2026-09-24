@@ -13,6 +13,8 @@ numero_de_bases = st.number_input("Cuantas bases se encuentran activas?", min_va
 
 inventario_plataforma = st.file_uploader("Seleccionar Inventario de la Plataforma:", type=["xlsx","xls"])
 inventario_sae = st.file_uploader("Seleccionar Inventario de SAE:", type=["xlsx","xls"])
+for i in range(numero_de_bases):
+    inventario_base_f"{i}" = st.file_uploader("Seleccionar Inventario de SAE:", type=["xlsx","xls"])
 
 if inventario_plataforma is not None and inventario_sae is not None:
     # Leer el archivo Excel del inventario de la plataforma e Inventario SAE
