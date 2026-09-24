@@ -9,7 +9,7 @@ import streamlit as st
 st.title("Separacion de Inventarios", text_alignment="center")
 
 st.header("Archvios necesarios para el procesamiento:")
-st.number_input("Cuantas bases se encuentran activas?")
+st.number_input("Cuantas bases se encuentran activas?", min_value=1, max_value=10)
 
 inventario_plataforma = st.file_uploader("Seleccionar Inventario de la Plataforma:", type=["xlsx","xls"])
 inventario_sae = st.file_uploader("Seleccionar Inventario de SAE:", type=["xlsx","xls"])
